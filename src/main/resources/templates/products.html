@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>BoB Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+    <body>
+        <div id="header"></div>
+        <div id="navigation">
+            <ul>
+                <li><a href="../">Главная</a></li>
+                <li><a href="../categories">Категории</a></li>
+                <li><a href="../about_us">О нас</a></li>
+                <li><a href="../contacts">Контакты</a></li>
+                <li><a href="../basket">Корзина</a></li>
+                <li><a href="../login">Вход</a></li>
+            </ul>
+        </div>
+        <div id="better-then-main">
+        <div id="main">
+            <a th:each="product : ${products}" th:href="@{/products/{id}(id=${product.getId()})}">
+                <div class="block-product">
+                    <img class="img_product" th:src="@{${product.getUrl()}}" th:alt="${product.getName()}">
+                    <div id="description-block">
+                        <i id="description"><b th:text="${product.getName()}">Category</b></i>
+                        <i id="price"><p  th:text="${product.getPrice} + ' руб.'">Цена</p></i>
+                        <div id="big-button">
+                            <div id="button-">-</div>
+                            <div id="count">0</div>
+                            <div id="button+">+</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+            <div id="aside">
+                <span id="title">Категории</span>
+                <div id="list">
+                    <ul th:each="category : ${categories}">
+                        <a th:href="@{../categories/{id}(id=${category.getId()})}" th:text="${category.getName()}">Category</a>
+                        <li th:each="product : ${allProducts.index(category.getId)}">
+                            <a th:href="@{/products/{id1}(id1=${product.getId()})}" th:text="${product.getName()}">Product</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">Футер</div>
+    </body>
+</html>

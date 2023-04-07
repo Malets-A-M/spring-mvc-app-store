@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>BoB Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="css/categories.css">
+</head>
+    <body>
+        <div id="header"></div>
+        <div id="navigation">
+            <ul>
+                <li><a href="../">Главная</a></li>
+                <li><a href="/categories">Категории</a></li>
+                <li><a href="/about_us">О нас</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+                <li><a href="/basket">Корзина</a></li>
+                <li><a href="/login">Вход</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <a th:each="category : ${categories}" th:href="@{/categories/{id}(id=${category.getId()})}">
+                <span class="block-category">
+                    <img class="img_category" th:src="@{${category.getUrl()}}" th:alt="${category.getName()}">
+                    <i class="description"><b th:text="${category.getName()}">Category</b></i>
+                </span>
+            </a>
+        </div>
+        <div id="footer">Футер</div>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #1d1d26;
+    color: #ffffff;
+    font-family: 'ISOCPEUR', serif;
+}
+a:link, a:visited, a:active{
+    color: #1d1d26;
+    text-decoration: none;
+}
+a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+#header{
+    width: 100%;
+    height: 45vh;
+    border-bottom: 2px solid dimgray;
+    text-align: center;
+    float: left;
+    background-image: url('../img/BoB Store.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: 15vh;
+}
+#footer{
+    width: 100%;
+    height: 10vh;
+    line-height: 70px;
+    margin-top: 50px;
+    border-top: 2px solid dimgray;
+    text-align: center;
+    float: left;
+}
+#navigation{
+    display: inline-block;
+    width: 90%;
+    height: 13.5vh;
+    margin-left: 5%;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: #1d1d26;
+    z-index: 1;
+}
+#navigation ul{
+    margin-top: 5vh;
+    list-style: none;
+    display: flex;
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+}
+#navigation .index ul{
+    margin-top: 50px;
+}
+#navigation li{
+    display: inline-block;
+    border: 1px solid dimgray;
+    border-radius: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+    background: #ffffff7a;
+    color: #1d1d26;
+    font-size: 25px;
+}
+#navigation li:hover{
+    color: #1d1d26;
+    background: dimgray;
+}
+#better-then-main{
+    display: flex;
+    width: 100%;
+}
+#main{
+    display: inline-block;
+    width: 65%;
+    margin-left: 5%;
+    border: 1px solid dimgray;
+    border-radius: 50px 50px 0 0;
+    text-align: center;
+    background: #ffffff7a;
+    color: #1d1d26;
+    padding-top: 2vh;
+}
+#main .block-product {
+    display: flex;
+    width: 48%;
+    height: 9vw;
+    float: left;
+    margin: 0 1% 3vh 1%;
+
+    filter: brightness(75%);
+    -webkit-filter: brightness(75%);
+    -moz-filter: brightness(75%);
+    -o-filter: brightness(75%);
+}
+#main .block-product:hover{
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -o-filter: brightness(100%);
+
+    background: #1d1d26;
+    border-radius: 50px 50px 0 0;
+}
+#main .img_product{
+    display: block;
+    width: 48.5%;
+    height: 95%;
+    float: left;
+    margin-right: 3%;
+    border: 0.5vh solid #1e1e25;
+    border-radius: 50px 0;
+}
+#description-block{
+    display: block;
+    float: right;
+    width: 47%;
+    font-size: 2vw;
+}
+#description{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    float: left;
+    font-size: 2vw;
+    line-height: 80%;
+}
+#description b{
+    margin: auto;
+}
+#price {
+    display: flex;
+    float: left;
+    width: 100%;
+    height: 20%;
+    font-size: 1.25vw;
+}
+#price p{
+    margin: auto;
+}
+#big-button{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 30%;
+}
+#big-button div{
+    display: block;
+    width: 27%;
+    height: 100%;
+    float: left;
+    color: white;
+    background: #1e1e25;
+}
+#big-button div:hover {
+    color: #1e1e26;
+    background: #88888e;
+}
+#button- {
+    margin-left: 9.5%;
+    border-radius: 1.5vw 0 0 0;
+    cursor: pointer;
+}
+#button\+{
+    border-radius: 0 1.5vw 0 0;
+    cursor: pointer;
+}
+#button-basket .img_basket{
+    display: block;
+    height: 50%;
+    margin-top: 22.5%;
+    margin-left: 20%;
+}
+#button-basket .img_basket:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+#button-basket .button{
+    display: block;
+    width: 25%;
+}
+#aside{
+    display: inline-block;
+    width: 20%;
+    height: 66vh;
+    margin-left: 5%;
+    padding: 2vh 0;
+    border: 1px solid dimgray;
+    border-radius: 50px;
+    text-align: center;
+    background: #ffffff7a;
+    color: #1d1d26;
+    position:sticky;
+    top: 13.51vh;
+}
+#list{
+    display: block;
+    width: 95%;
+    height: 85%;
+    overflow-y: scroll;
+}
+#list::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+#list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #1e1e25;
+}
+#title {
+    display: block;
+    margin-bottom: 2vh;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+#aside ul a {
+    display: block;
+    margin-left: 8%;
+    text-align: left;
+    font-size: 2vw;
+    width: 75%;
+    padding: 0 1vw;
+    border-radius: 50px;
+}
+#aside li a {
+    display: block;
+    margin-left: 20%;
+    text-align: left;
+    font-size: 1.5vw;
+    width: 63%;
+}
+#aside ul a:hover {
+    display: block;
+    background: #1e1e25;
+    border-radius: 50px;
+    color: white;
+}
+
+
+
